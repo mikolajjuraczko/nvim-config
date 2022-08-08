@@ -1,6 +1,6 @@
 local set = vim.opt
 
--- lines and columns
+-- Lines and columns
 set.number = true
 set.relativenumber = true
 set.numberwidth = 4
@@ -8,50 +8,50 @@ set.cursorline = true
 set.signcolumn = 'yes'
 set.fillchars:append { eob = " " }
 
--- colors
+-- Colors
 set.termguicolors = true
 
--- clipboard and mouse
+-- Clipboard and mouse
 set.clipboard = 'unnamedplus'
 set.mouse = 'a'
 
--- backup
+-- Backup
 set.backup = false
 set.writebackup = false
 set.swapfile = false
 set.undofile = true
 
--- completions
+-- Completions
 set.completeopt = { 'menuone', 'noselect' }
 set.pumheight = 10
 set.updatetime = 300
 set.shortmess:append "c"
 
--- search
+-- Search
 set.hlsearch = true
 set.ignorecase = true
 set.smartcase = true
 
--- split behavior
+-- Split behavior
 set.splitbelow = true
 set.splitright = true
 
--- indentation
+-- Indentation
 set.smartindent = true
 set.expandtab = true
 set.shiftwidth = 2
 set.tabstop = 2
 
--- text display behavior
+-- Text display behavior
 set.wrap = false
 set.scrolloff = 8
 set.sidescrolloff = 8
 
--- text editing
+-- Text editing
 set.iskeyword:append("-")
 
--- mappings
+-- Mappings
 set.timeoutlen = 1000
 
--- miscellaneous
+-- Miscellaneous
 set.fileencoding = 'utf-8'
