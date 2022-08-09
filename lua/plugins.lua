@@ -43,6 +43,9 @@ packer.init {
 return packer.startup(function(use)
   -- Basics
   use 'wbthomason/packer.nvim'
+
+  -- Colors
+  use 'ellisonleao/gruvbox.nvim'
   
   if PACKER_BOOTSTRAP then
     require('packer').sync()
