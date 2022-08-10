@@ -46,6 +46,10 @@ return packer.startup(function(use)
 
   -- Colors
   use 'ellisonleao/gruvbox.nvim'
+
+  -- nvim-tree
+  use 'kyazdani42/nvim-tree.lua'
+  use 'kyazdani42/nvim-web-devicons'
   
   if PACKER_BOOTSTRAP then
     require('packer').sync()
