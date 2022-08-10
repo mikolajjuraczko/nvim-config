@@ -50,7 +50,19 @@ return packer.startup(function(use)
   -- nvim-tree
   use 'kyazdani42/nvim-tree.lua'
   use 'kyazdani42/nvim-web-devicons'
-  
+
+  -- Completions
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-nvim-lua'
+  use 'saadparwaiz1/cmp_luasnip' 
+
+  -- Snippets
+  use 'L3MON4D3/LuaSnip'
+  use 'rafamadriz/friendly-snippets'
+
   if PACKER_BOOTSTRAP then
     require('packer').sync()
   end

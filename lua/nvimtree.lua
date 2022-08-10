@@ -35,4 +35,9 @@ require('nvim-web-devicons').set_icon {
     color = light_gray,
     name = 'GitIgnore',
   },
+   ['py'] = {
+    icon = '',
+    color = light_yellow,
+    name = 'Py',
+  },
 }
