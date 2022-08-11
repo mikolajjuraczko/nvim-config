@@ -1,17 +1,17 @@
 local fn = vim.fn
 
 -- Automatically install packer
-local install_path = fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
+local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
   PACKER_BOOTSTRAP = fn.system {
-    'git',
-    'clone',
-    '--depth',
-    '1',
-    'https://github.com/wbthomason/packer.nvim',
+    "git",
+    "clone",
+    "--depth",
+    "1",
+    "https://github.com/wbthomason/packer.nvim",
     install_path,
   }
-  print 'Installing packer close and reopen Neovim...'
+  print "Installing packer close and reopen Neovim..."
   vim.cmd [[packadd packer.nvim]]
 end
 
@@ -23,18 +23,18 @@ vim.cmd [[
   augroup end
 ]]
 
-local status_ok, packer = pcall(require, 'packer')
+local status_ok, packer = pcall(require, "packer")
 if not status_ok then
   return
 end
 
 -- Packer settings
-local util = require('packer.util')
+local util = require("packer.util")
 packer.init {
-  compile_path = util.join_paths(vim.fn.stdpath('config'), '.packer', 'packer_compiled.lua'),
+  compile_path = util.join_paths(vim.fn.stdpath("config"), ".packer", "packer_compiled.lua"),
   display = {
     open_fn = function()
-      return util.float { border = 'rounded' }
+      return util.float { border = "rounded" }
     end,
   },
 }
@@ -42,36 +42,36 @@ packer.init {
 -- Plugins list
 return packer.startup(function(use)
   -- Basics
-  use 'wbthomason/packer.nvim'
+  use "wbthomason/packer.nvim"
 
   -- Colors
-  use 'ellisonleao/gruvbox.nvim'
+  use "ellisonleao/gruvbox.nvim"
 
   -- nvim-tree
-  use 'kyazdani42/nvim-tree.lua'
-  use 'kyazdani42/nvim-web-devicons'
+  use "kyazdani42/nvim-tree.lua"
+  use "kyazdani42/nvim-web-devicons"
 
   -- Completions
-  use 'hrsh7th/nvim-cmp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-nvim-lua'
-  use 'saadparwaiz1/cmp_luasnip' 
+  use "hrsh7th/nvim-cmp"
+  use "hrsh7th/cmp-buffer"
+  use "hrsh7th/cmp-path"
+  use "hrsh7th/cmp-nvim-lsp"
+  use "hrsh7th/cmp-nvim-lua"
+  use "saadparwaiz1/cmp_luasnip" 
 
   -- Snippets
-  use 'L3MON4D3/LuaSnip'
-  use 'rafamadriz/friendly-snippets'
+  use "L3MON4D3/LuaSnip"
+  use "rafamadriz/friendly-snippets"
 
   -- LSP
-  use 'neovim/nvim-lspconfig'
-  use 'williamboman/nvim-lsp-installer'
+  use "neovim/nvim-lspconfig"
+  use "williamboman/nvim-lsp-installer"
 
   -- Markdown ~> check installation instructions
-  use {'iamcco/markdown-preview.nvim'}
+  use {"iamcco/markdown-preview.nvim"}
 
 
   if PACKER_BOOTSTRAP then
-    require('packer').sync()
+    require("packer").sync()
   end
 end)
