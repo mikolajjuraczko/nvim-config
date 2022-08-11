@@ -63,6 +63,14 @@ return packer.startup(function(use)
   use 'L3MON4D3/LuaSnip'
   use 'rafamadriz/friendly-snippets'
 
+  -- LSP
+  use 'neovim/nvim-lspconfig'
+  use 'williamboman/nvim-lsp-installer'
+
+  -- Markdown ~> check installation instructions
+  use {'iamcco/markdown-preview.nvim'}
+
+
   if PACKER_BOOTSTRAP then
     require('packer').sync()
   end
