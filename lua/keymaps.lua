@@ -31,7 +31,7 @@ keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 -- Move selection up or down
-keymap("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)                                                                                             
+keymap("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
 keymap("v", "<A-k>", ":m '<-2<CR>==gv", opts)
 
 -- Plugins --

@@ -67,6 +67,9 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig"
   use "williamboman/nvim-lsp-installer"
 
+  -- Treesitter
+  use "nvim-treesitter/nvim-treesitter"
+
   -- Markdown ~> check installation instructions
   use {"iamcco/markdown-preview.nvim"}
 
