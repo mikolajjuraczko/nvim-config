@@ -70,6 +70,9 @@ return packer.startup(function(use)
   -- Treesitter
   use "nvim-treesitter/nvim-treesitter"
 
+  -- Autopairs
+  use "windwp/nvim-autopairs"
+
   -- Markdown ~> check installation instructions
   use {"iamcco/markdown-preview.nvim"}
 

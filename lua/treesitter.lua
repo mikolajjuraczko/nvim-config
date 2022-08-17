@@ -10,5 +10,8 @@ configs.setup({
 		enable = true,
 		-- disable = { "css" },
 	},
+  autopairs = {
+		enable = true,
+	},
 	indent = { enable = true, disable = { "" } },
 })
