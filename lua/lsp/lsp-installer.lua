@@ -6,6 +6,8 @@ end
 local servers = {
   "sumneko_lua",
   "pyright",
+  "tsserver",
+  "clangd",
 }
 
 lsp_installer.setup()

@@ -79,7 +79,6 @@ return packer.startup(function(use)
   -- Markdown ~> check installation instructions
   use {"iamcco/markdown-preview.nvim"}
 
-
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
