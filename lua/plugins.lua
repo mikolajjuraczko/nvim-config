@@ -76,8 +76,10 @@ return packer.startup(function(use)
   -- Toggleterm
   use "akinsho/toggleterm.nvim"
 
-  -- Markdown ~> check installation instructions
-  use {"iamcco/markdown-preview.nvim"}
+  -- Telescope
+  use {"nvim-telescope/telescope.nvim", branch = '0.1.x'}
+  use "nvim-lua/plenary.nvim"
+
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
