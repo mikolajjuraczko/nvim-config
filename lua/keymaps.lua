@@ -39,6 +39,20 @@ keymap("v", "<A-k>", ":m '<-2<CR>==gv", opts)
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Telescope
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+local builtin = require("telescope.builtin")
+vim.keymap.set("n", "<leader>ff", builtin.find_files, opts)
+vim.keymap.set("n", "<leader>fg", builtin.live_grep, opts)
+
+-- Languages --
+-- JS related
+vim.api.nvim_create_autocmd({ "FileType" }, {
+	pattern = {
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+	},
+	callback = function()
+		vim.keymap.set("n", "<leader>cl", "oconsole.log()<Left>", opts)
+	end,
+})
