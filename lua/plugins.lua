@@ -80,6 +80,9 @@ return packer.startup(function(use)
   use {"nvim-telescope/telescope.nvim", branch = '0.1.x'}
   use "nvim-lua/plenary.nvim"
 
+  -- null-ls
+  use "jose-elias-alvarez/null-ls.nvim"
+
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()

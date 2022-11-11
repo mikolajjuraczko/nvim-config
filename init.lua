@@ -1,11 +1,12 @@
-require "options"
-require "keymaps"
-require "plugins"
-require "colorscheme"
-require "nvimtree"
-require "completions"
-require "lsp"
-require "treesitter"
-require "autopairs"
-require "toggleterm-nvim"
-require "telescope-nvim"
+require("options")
+require("keymaps")
+require("plugins")
+require("colorscheme")
+require("nvimtree")
+require("completions")
+require("lsp")
+require("treesitter")
+require("autopairs")
+require("toggleterm-nvim")
+require("telescope-nvim")
+require("nullls")
