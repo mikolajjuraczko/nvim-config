@@ -87,6 +87,12 @@ return packer.startup(function(use)
 	use("numToStr/Comment.nvim")
 	use("JoosepAlviste/nvim-ts-context-commentstring")
 
+	-- vim-surround
+	use("tpope/vim-surround")
+
+	-- nvim-colorizer
+	use("norcalli/nvim-colorizer.lua")
+
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end

@@ -9,6 +9,7 @@ local servers = {
 	"tsserver",
 	"clangd",
 	"cssls",
+	"html",
 }
 
 lsp_installer.setup()
