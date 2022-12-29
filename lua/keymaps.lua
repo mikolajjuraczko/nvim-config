@@ -43,6 +43,9 @@ local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>ff", builtin.find_files, opts)
 vim.keymap.set("n", "<leader>fg", builtin.live_grep, opts)
 
+-- Toggleterm
+keymap("n", "<leader>ls", "<cmd>lua _live_server_toggle()<CR>", { noremap = true, silent = true })
+
 -- Languages --
 -- JS related
 vim.api.nvim_create_autocmd({ "FileType" }, {
@@ -53,6 +56,6 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 		"typescriptreact",
 	},
 	callback = function()
-		vim.keymap.set("n", "<leader>cl", "oconsole.log()<Left>", opts)
+		vim.keymap.set("n", "<leader>cl", "oconsole.log();<Left><Left>", opts)
 	end,
 })

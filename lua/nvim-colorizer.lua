@@ -3,4 +3,4 @@ if not status_ok then
 	return
 end
 
-colorizer.setup({ css = { css = true }, html = {} })
+colorizer.setup({ css = {}, html = {} })

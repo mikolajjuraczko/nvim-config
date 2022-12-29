@@ -19,3 +19,13 @@ toggleterm.setup({
 		border = "curved",
 	},
 })
+
+local Terminal = require("toggleterm.terminal").Terminal
+local live_server = Terminal:new({
+	cmd = "live-server",
+	hidden = "true",
+})
+
+function _live_server_toggle()
+	live_server:toggle()
+end
